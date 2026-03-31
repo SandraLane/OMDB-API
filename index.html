@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>find your horror movie</title>
+    <script src="https://kit.fontawesome.com/038199bb87.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="flex flex-col" style="display:flex; flex: 1 1 0%;">
+            <div class="navbar">
+                <div class="flex content-wrapper justify-between align-center" style="flex-direction: row; z-index: 1005;">
+                    <div class="logo">
+                        <img src="https://omdb.mathub.io/img/logo-omdb.png" alt="omdb logo" class="logo">
+                    </div>
+                    <div class="links flex align-center justify-between">
+                        <a href="/" class="link router-link-active">Home</a>
+                        <a href="/" class="link router-link-exact-active router-link-active">Find your movie</a>
+                        <a href="#" class="btn-contact">Contact</a>
+                    </div>
+                </div>
+                <div class="content-wrapper flex-col align-center" style="margin-top: 40px;">
+                    <h1>Browse our movies</h1>
+                    <div class="input">
+                        <input id="searchInput" class="input-wrap" type="text" placeholder="Search by Title or IMDB ID">
+                        <div class="search-wrapper flex justify-center align-center">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <main>
+                <section id="search">
+                    <div id="filter" class="content-wrapper justify-between">
+                        <h1 class="search-info">
+                            <span id="searchTitle" class="black-txt">Search results:</span>
+                        </h1>
+                        <div class="year-slider-container">
+                            <h2>
+                                <span class="black-txt">Year range:</span>
+                                <span id="yearRangeText">1980 - 2024</span>
+                            </h2>
+                            <div class="slider-area">
+                                <div class="slider-track"></div>
+                                <input type="range" min="1950" max="2024" value="1980" id="minYear">
+                                <input type="range" min="1950" max="2024" value="2024" id="maxYear">
+                            </div>
+                            <div class="year-values">
+                                <span id="minYearValue">1980</span>
+                                <span id="maxYearValue">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="movies">
+                            <div class="loading-overlay">
+                                <i style="font-size: 30px; color: #043959;" class="fa-solid fa-spinner"></i>
+                            </div>
+                            <div class="content-wrap"></div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+    <div class="container">
+        <div class="row row__column">
+            <a href="#">
+                <figure class="footer__logo">
+                    <img src="https://omdb.mathub.io/img/logo-omdb.png" alt="omdb logo" class="logo footer__logo--img">
+                </figure>
+            </a>
+        <div class="footer__list">
+            <a href="#" class="footer__link">Home</a>
+            <a class="footer__link no-cursor">About</a>
+            <a href="#" class="footer__link">Movies</a>
+            <a class="footer__link no-cursor">Contact</a>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2026 OMDB</div>
+        </div>
+    </div>
+    </footer>
+    <script src="index.js" defer></script>
+</body>
+</html>
