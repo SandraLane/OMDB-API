@@ -200,17 +200,4 @@ button.addEventListener("click", () => {
     fetchMovies(value);
 });
 
-minYear.addEventListener("input", () => {
-    updateYearUI();
-    updateSliderTrack();
-    displayMovies(allMovies);
-});
-
-maxYear.addEventListener("input", () => {
-    updateYearUI();
-    updateSliderTrack();
-    displayMovies(allMovies);
-});
-
-
 
